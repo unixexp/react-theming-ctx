@@ -1,7 +1,10 @@
-import React from "react"
+import React, { useContext } from "react"
+import ThemeContext from "../theme-context/theme-context"
 import "./button.scss"
 
-const Button = ({ theme, onClick, children }) => {
+const Button = ({ onClick, children }) => {
+
+    const { theme } = useContext(ThemeContext)
 
     return (
         <button
